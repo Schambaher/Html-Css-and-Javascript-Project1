@@ -1,0 +1,107 @@
+:root {
+  --color-primario: #f4623a;
+  --bg-color-white: white;
+  --bg-color-primario: #f4623a;
+}
+
+/* UTILIDADES */
+.btn {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3rem;
+  padding: 2rem 3rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.bg-orange {
+  background-color: var(--bg-color-primario);
+}
+
+.text-color-white {
+  color: white;
+}
+
+.container {
+  width: min(95%, 120rem);
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-navigation {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(
+      to bottom,
+      rgba(92, 77, 66, 0.8) 0%,
+      rgba(92, 77, 66, 0.8) 100%
+    ),
+    url("../img/bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 63vh;
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-flex {
+    width: 50%;
+  }
+}
+
+.hero-flex {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-title {
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+}
+
+.divider {
+  width: 6rem;
+  height: 0.3rem;
+  background-color: var(--color-primario);
+}
+
+.hero-text {
+  color: white;
+  opacity: 0.8;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+}
