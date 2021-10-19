@@ -391,3 +391,26 @@
   font-size: 2.5rem;
   font-weight: 400;
 }
+
+/* REGISTER */
+
+.register{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.register-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+}
