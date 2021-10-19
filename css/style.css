@@ -46,6 +46,8 @@
   width: 100%;
   background-color: white;
   padding: 1.5rem 0;
+  transition: 0.3s;
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 15%);
 }
 
 .header-flex {
@@ -74,12 +76,9 @@
 }
 
 .header-navigation {
-  background-color: white;
   flex: 0 0 100%;
   height: 0;
   background-color: white;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   transition: 0.3s;
 }
@@ -89,8 +88,6 @@
 }
 
 .header-navigation-content {
-  display: flex;
-  flex-direction: column;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -111,6 +108,61 @@
   color: var(--color-primario);
 }
 
+@media (min-width: 720px) {
+  .header {
+    background-color: transparent;
+  }
+
+  .header.sticky {
+    background-color: white;
+  }
+
+  .header-title {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .header-title.sticky {
+    color: black;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .header-navigation {
+    flex: 0 0 auto;
+    height: 48px;
+    background-color: transparent;
+  }
+
+  .header-navigation.show {
+    height: 48px;
+  }
+
+  .header-navigation-content {
+    display: flex;
+    gap: 3rem;
+    background-color: transparent;
+  }
+
+  .header-navigation-link {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .header-navigation-link.sticky {
+    color: rgba(0, 0, 0);
+  }
+
+  .header-navigation-link.sticky:hover {
+    color: var(--color-primario);
+  }
+
+  .header-navigation-link:hover {
+    color: white;
+    opacity: 1;
+  }
+}
+
 /* HERO */
 .hero {
   background: linear-gradient(
@@ -123,16 +175,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 63vh;
-}
-
-@media (min-width: 1000px) {
-  .hero {
-    height: 100vh;
-  }
-
-  .hero-flex {
-    width: 50%;
-  }
 }
 
 .hero-flex {
@@ -156,6 +198,16 @@
   font-weight: 300;
   text-align: center;
   line-height: 1.5;
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-flex {
+    width: 65%;
+  }
 }
 
 /* SECTION NEED */
@@ -182,6 +234,13 @@
   opacity: 0.7;
   line-height: 1.5;
   font-weight: 300;
+}
+
+@media (min-width: 720px) {
+  .need-flex {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
 
 /* SERVICES */
@@ -228,4 +287,25 @@
   color: #212529;
   opacity: 0.7;
   font-weight: 400;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .services-items {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .service {
+    margin-top: none;
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 1000px) {
+  .service {
+    margin-top: none;
+    flex: 0 0 calc(25% - 2rem);
+  }
 }
