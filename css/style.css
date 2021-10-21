@@ -10,6 +10,10 @@
   height: 0.3rem;
 }
 
+.pt-10 {
+  padding-top: 10rem;
+}
+
 .p-10 {
   padding: 10rem 0;
 }
@@ -48,6 +52,10 @@
   transition: 0.3s;
   background-color: white;
   z-index: 1;
+}
+
+.header.sticky {
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 15%);
 }
 
 .header-flex {
@@ -397,20 +405,69 @@
 .register{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 3rem;
 }
 
 .register-form {
-  width: 40%;
+  width: 95%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  gap: 2rem; 
 }
 
 .input-group {
+  position: relative;
+  height: 5rem;
+}
+
+.input-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
+  outline: none;
+  border: 1px solid #CED4DA;
+  padding-top: 2rem;
+  padding-left: 1rem;
+  border-radius: 1rem;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.label-form {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 1rem;
   display: flex;
+  align-items: center;
+  font-weight: 300;
+  transition: .3s;
+}
+
+.input-form:focus + .label-form {
+  font-size: 1.2rem;
+  align-items: flex-start;
+  color: #817474;
+  z-index: 2;
+}
+
+.input-form:not(:focus) + .label-form {
+  font-size: 1.2rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 720px){
+  .register-form {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1000px){
+  .register-form {
+    width: 40%;
+  }
 }
