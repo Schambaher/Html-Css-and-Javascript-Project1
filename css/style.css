@@ -183,7 +183,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 63vh;
+  height: 90vh;
 }
 
 .hero-flex {
@@ -409,6 +409,14 @@
   gap: 3rem;
 }
 
+.register-text {
+  color: #212529;
+  opacity: 0.8;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5;
+}
+
 .register-form {
   width: 95%;
   display: flex;
@@ -460,6 +468,20 @@
   align-items: flex-start;
 }
 
+.register-number {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.register-number > ion-icon {
+  font-size: 4rem;
+  color: rgb(122, 114, 114);
+}
+
 @media (min-width: 720px){
   .register-form {
     width: 70%;
@@ -470,4 +492,20 @@
   .register-form {
     width: 40%;
   }
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #F8F9FA;
+  padding: 5rem 0;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6c757d;
+  font-weight: 300;
+  font-size: 1.4rem;
 }
